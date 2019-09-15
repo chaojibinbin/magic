@@ -1,36 +1,47 @@
-<template>
-  <v-app>
-    <v-app-bar app>
-      <v-toolbar-title class="headline text-uppercase">
-        <span>Vuetify</span>
-        <span class="font-weight-light">MATERIAL DESIGN</span>
-      </v-toolbar-title>
-      <v-spacer></v-spacer>
-      <v-btn
-        text
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-      >
-        <span class="mr-2">Latest Release</span>
-      </v-btn>
-    </v-app-bar>
-
-    <v-content>
-      <HelloWorld/>
-    </v-content>
-  </v-app>
+<template >
+<div class="com">
+ <router-view/>
+</div>
+ 
 </template>
-
 <script>
-import HelloWorld from './components/HelloWorld';
+
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
+  
   },
   data: () => ({
     //
   }),
 };
 </script>
+
+<style lang="scss" >
+
+.com{
+background:url('./assets/bg.jpg');
+background-size: cover;
+
+}
+::-webkit-scrollbar { /*滚动条整体样式*/
+    width: 0px; /*高宽分别对应横竖滚动条的尺寸*/
+    height: 1px;
+}
+
+::-webkit-scrollbar-thumb { /*滚动条里面小方块*/
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 5px rgba(228, 57, 60, 0.2);
+    background: rgba(20, 20, 50, 0.6);
+    position: absolute;
+}
+
+::-webkit-scrollbar-track { /*滚动条里面轨道*/
+    -webkit-box-shadow: inset 0 0 5px rgba(228, 57, 60, 0.2);
+    border-radius: 10px;
+    background: #EDEDED;
+    position: absolute;
+}
+       
+</style>
