@@ -8,9 +8,22 @@ export default new Router({
     base: process.env.BASE_URL,
     routes: [{
             path: '/',
-            name: 'home',
-            component: Home
-        }
+           
+            component: Home,
+            children:[
+                {
+                    name:'home',
+                    path:'/',
+                    component:()=>import('./views/serch.vue')
+                },
+                {
+                    path:'/wenku',
+                    name:'wenku',
+                    component:()=>import('./views/wenku.vue')
+                }
+            ]
+        },
+        
 
     ]
 })
