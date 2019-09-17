@@ -19,6 +19,7 @@
 </template>
 
 <script>
+
   export default {
     data () {
       return {
@@ -29,10 +30,21 @@
 methods:{
 
 Magic:function(){
-this.$router.push({name:'wenku'})
+  this.$axios.get('api/search?ct=17&pn=0&tn=ikaslist&rn=10&lm=0&ie=utf-8&word=%E5%A3%81%E7%BA%B8',{
+  }).then((Response)=>{
+
+    console.log(Response)
+  }
+  )
+
+//this.$router.push({name:'wenku'})
 }
 
-}
+
+
+  }
+  
+
   }
 </script>
 <style lang="scss" scoped>
