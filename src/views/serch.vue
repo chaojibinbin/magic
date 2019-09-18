@@ -30,10 +30,14 @@
 methods:{
 
 Magic:function(){
-  this.$axios.get('api/search?ct=17&pn=0&tn=ikaslist&rn=10&lm=0&ie=utf-8&word=%E5%A3%81%E7%BA%B8',{
+  this.$axios.get('http://wenku.baiduvvv.com/d/?url=http://wenku.baidu.com/view/68d08032f9c75fbfc77da26925c52cc58ad690f8.html',{
   }).then((Response)=>{
-
-    console.log(Response)
+var cheerio = require('cheerio')
+ let $ = cheerio.load(Response.data)
+  let t =  $("[name='t']").attr('value')
+  let sign =  $("[name='sign']").attr('value') 
+  let url =  $("[name='url']").attr('value')
+  
   }
   )
 

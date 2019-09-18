@@ -2,7 +2,7 @@ module.exports = {
     devServer: {
       proxy: {
         '/api': {
-          target: 'http://baidu.com',
+          target: 'http://wenku.baiduvvv.com',
           ws: true,
           changeOrigin: true,
           '^/api': ''
