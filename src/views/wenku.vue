@@ -26,9 +26,15 @@
       return {
         
       }
+    },
+    mounted(){
+     console.log(this.$route.params.url)
     }
 
 }
+
+
+
 
 </script>
 <style lang="scss" scoped>
